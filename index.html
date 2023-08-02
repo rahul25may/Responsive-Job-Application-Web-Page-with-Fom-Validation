@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="apply_box">
+            <h1>Job Application <span class="title_small">(Web)</span></h1>
+            <form action="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post">
+                <div class="form_container">
+                    <div class="form_control name">
+                        <label for="fname"> First Name* </label>
+                        <input type="text" name="fname" placeholder="Enter First Name" id="fname">
+                        <div class="formerror"></div>
+                    </div>
+                    <div class="form_control">
+                        <label for="last_name"> Last Name </label>
+                        <input type="text" name="lname" placeholder="Enter Last Name" id="lname">
+                        <div class="formerror"></div>
+                    </div>
+                    <div class="form_control" id="email">
+                        <label for="email"> Email* </label>
+                        <input type="email" name="email" placeholder="Enter Email" id="email">
+                        <div class="formerror"></div>
+                    </div>
+                    <div class="form_control job-role">
+                        <label for="job_role"> Job Role </label>
+                        <select name="job_role" id="job_role">
+                            <option value="null">Select Job Role</option>
+                            <option value="frontend">Frontend Developer</option>
+                            <option value="full_stack">Full Stack Developer</option>
+                            <option value="ui_ux">UI UX Designer</option>
+                        </select>
+                        <div class="formerror"></div>
+                    </div>
+                    <div class="textarea_control address">
+                        <label for="address"> Address </label>
+                        <textarea name="address" id="address" rows="5" cols="50" placeholder="Enter Address"></textarea>
+                        <div class="formerror"></div>
+                    </div>
+                    <div class="form_control city">
+                        <label for="city"> City* </label>
+                        <input type="text" name="city" placeholder="Enter City" id="city">
+                        <div class="formerror"></div>
+                    </div>
+                    <div class="form_control pincode">
+                        <label for="pincode"> Pincode* </label>
+                        <input type="number" name="pincode" placeholder="Enter Pincode" id="pincode">
+                        <div class="formerror"></div>
+                    </div>
+                    <div class="form_control dated">
+                        <label for="dated"> Date </label>
+                        <input type="date" value="" name="dated" placeholder="Enter Date" id="dated">
+                        <div class="formerror"></div>
+                    </div>
+                    <div class="form_control uploadd">
+                        <label for="upload"> Upload Your CV/Resume (pdf/doc)* </label>
+                        <input type="file" name="upload" id="upload">
+                        <div class="formerror"></div>
+                    </div>
+                </div>
+                <div class="button_container">
+                    <button type="submit"> Apply Now </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright &copy; Rahul - 2023</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
